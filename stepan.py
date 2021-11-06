@@ -1,5 +1,6 @@
 import speech_recognition as sp
 import parserstepan
+import notifier
 
 mic = sp.Microphone()
 r = sp.Recognizer()
@@ -27,7 +28,8 @@ while True:
                 if ress[i] == 'степан' or ress[i] == 'стёпа':
                     bres = parserstepan.parse(parserstepan.scut(res, i))
                     print('oxetm '+ parserstepan.scut(res, i))
-                    print('# ' + bres)
+                    # print('# ' + bres)
+                    notifier.notify(bres)
                     break
 
             # это если прощаемся

@@ -10,8 +10,8 @@ tString = """
 <toast>
     <visual>
         <binding template='ToastGeneric'>
-            <text>Sample toast</text>
-            <text>Sample content</text>
+            <text>Степан</text>
+            <text>Sфывфыв</text>
         </binding>
     </visual>
 </toast>

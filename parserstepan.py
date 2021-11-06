@@ -16,24 +16,29 @@ def parse(prompt:str):
     # video stuff
     if prompt == "включай музыку":
         videostepan.tovideo()
-        return 'vidos na podhode'
+        return 'видос на подходе'
 
     if prompt.startswith('включи ') or prompt.startswith('найди '):
         search = scut(prompt,1)
         videostepan.youtube_search(search)
-        return (f'looking for {search}')
+        return (f'ищу {search}')
 
     # panic
     if prompt == "красный код":
-        return 'not implemented'
+        return 'хуй соси'
 
     # media controls
     if prompt == 'пауза':
         kb.press('play/pause')
-        return 'pause ok'
+        return 'ладно'
+
+    if prompt == 'я хочу дико д******':
+        link = 'https://www.youtube.com/watch?v=xwC3VZlLrzQ'
+        videostepan.open_link(link)
+        return 'дрочи дрочи не бойся'
 
     # прощаемся
     if prompt in ["хорош", "заткнись"]:
-        return 'poka...'
+        return 'пока...'
 
-    else: return '???'
+    else: return 'не могу сказать что я понял'
